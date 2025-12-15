@@ -1,3 +1,45 @@
+## Installation Guide
+
+# 1. Cloner le projet
+git clone https://github.com/USERNAME/projet-ecole.git
+cd projet-ecole
+
+# 2. Installer les dépendances
+composer install
+
+# 3. Créer le fichier .env
+copy .env.example .env    # Windows
+cp .env.example .env      # Linux/Mac
+
+# 4. Générer la clé
+php artisan key:generate
+
+# 5. Configurer .env
+# Ouvre .env et vérifie :
+# DB_DATABASE=ecole_db
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+# 6. Créer la base de données 'ecole_db' dans mysqlworkbench
+
+# 7. Créer les tables
+php artisan migrate
+
+# 8. Créer le compte admin
+php artisan db:seed
+
+# 9. Lancer le serveur
+php artisan serve
+
+Accès
+
+Site : http://127.0.0.1:8000
+Admin : http://127.0.0.1:8000/admin/login
+
+Email : admin@ecole.com
+Mot de passe : password123
+
+## Link
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
