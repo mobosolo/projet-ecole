@@ -10,7 +10,7 @@ class PublicController extends Controller
     public function accueil()
     {
         $actualites = Actualite::latest()->take(3)->get();
-        return view('layouts.public', compact('actualites'));
+        return view('public.accueil', compact('actualites'));
     }
 
     public function presentation()
