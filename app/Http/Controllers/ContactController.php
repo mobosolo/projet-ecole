@@ -28,7 +28,7 @@ class ContactController extends Controller
         // Création du message
         Message::create([
             'nom' => $request->nom,
-            'email' => $request->email,
+            'email' => $request->email, 
             'contenu' => $request->contenu,
             'date_envoi' => now()
         ]);
