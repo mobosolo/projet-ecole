@@ -58,10 +58,7 @@ return [
     'prefix_indexes' => true,
     'strict' => true,
     'engine' => null,
-    'options' => [
-        PDO::MYSQL_ATTR_SSL_CA => true,
-        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
-    ],
+    'options' => [],
 ],
 
         'mariadb' => [
